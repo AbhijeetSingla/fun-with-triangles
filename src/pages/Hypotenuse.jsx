@@ -1,5 +1,5 @@
 import { useState } from "react";
-import {getHypotenuse} from "../utils/functions";
+import {convertToNewRange, getHypotenuse} from "../utils/functions";
 import { FormControl, TextField } from "@mui/material";
 
 function Hypotenuse() {
@@ -19,15 +19,17 @@ function Hypotenuse() {
         width: 0,
         height: 0,
         transition: "150ms ease-in-out",
-        borderLeft: `${triangleRep.left}0px solid transparent`,
-        borderRight: `${triangleRep.right}0px solid transparent`,
-        borderBottom: `${triangleRep.bottom}0px solid #1976d2`
+        borderLeft: `${triangleRep.left}px solid transparent`,
+        borderRight: `${triangleRep.right}px solid transparent`,
+        borderBottom: `${triangleRep.bottom}px solid #1976d2`
     }
 
     function formSubmit(event, sides) {
         event.preventDefault();
         const thirdSide = getHypotenuse(sides);
-        setTriangleRep({...triangleRep, left: sides.first, right: sides.second, bottom: thirdSide});
+        const oldSides = {...sides, third: thirdSide};
+        const newSides = convertToNewRange(oldSides);
+        setTriangleRep({...triangleRep, left: newSides.first, right: newSides.second, bottom: newSides.third});
         setConfirmation(`The Hypotenuse is ${thirdSide}`);
     }
 

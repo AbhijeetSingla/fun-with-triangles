@@ -14,4 +14,22 @@ function getArea(sidesObject){
     return Math.round((area + Number.EPSILON) * 100) / 100
 }
 
-export {isTriangle, getHypotenuse, getArea};
+function convertToNewRange(sides){
+
+    const oldValues = Object.values(sides);
+    const oldMin = Math.min(...oldValues);
+    const oldMax = Math.max(...oldValues);
+    const newMin = 25;
+    const newMax = 50;
+    const oldRange = oldMax - oldMin;
+    const newRange = newMax - newMin;
+    
+    if(oldRange === 0){
+        return sides
+    } else {
+        const newValues = oldValues.map(number => (((number - oldMin) * newRange) / oldRange) + newMin )
+        return {first: newValues[0], second: newValues[1], third: newValues[2]}
+    }
+}
+
+export {isTriangle, getHypotenuse, getArea, convertToNewRange};
