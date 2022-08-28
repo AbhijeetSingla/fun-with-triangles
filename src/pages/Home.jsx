@@ -1,6 +1,8 @@
 import { NavLink } from "react-router-dom";
 import Header from "../components/Header";
 
+document.title = "Triagnles | Home";
+
 function Home() {
     return ( 
         <>

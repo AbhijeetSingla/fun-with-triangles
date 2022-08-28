@@ -2,6 +2,8 @@ import { FormControl, TextField } from "@mui/material";
 import { useState } from "react";
 import { isTriangle } from "../utils/functions";
 
+document.title = "Triangles | Is Triangle?";
+
 function IsTriangle() {
 
     const [angles, setAngles] = useState({first: 0, second: 0, third: 0});

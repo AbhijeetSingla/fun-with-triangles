@@ -2,6 +2,8 @@ import { useState } from "react";
 import {getHypotenuse} from "../utils/functions";
 import { FormControl, TextField } from "@mui/material";
 
+document.title = "Triangles | Hypotenuse Calculator";
+
 function Hypotenuse() {
 
     const [sides, setSides] = useState({first: 0, second: 0});

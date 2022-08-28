@@ -1,6 +1,8 @@
 import { useState } from "react";
 import db from "../database/quizQuestions.json";
 
+document.title = "Triagnles | Quiz";
+
 function Quiz() {
 
     const [score, setScore] = useState(0);
