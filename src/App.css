@@ -1,3 +1,64 @@
+@import url(https://abhijeetsingla.netlify.app/css/styles.css);
+
 html, body, #root {
   height: 100%;
+}
+
+.header-base{
+  text-align: center;
+  font-size: 3.5rem;
+}
+
+.capitalize{
+  text-transform: capitalize;
+}
+
+.intro{
+  justify-content: center;
+  align-items: center;
+  --gap: 5rem;
+}
+
+#firstAngle-label, #secondAngle-label, #thirdAngle-label, #firstSide-label, #secondSide-label {
+  color: var(--text-color);
+}
+
+input[type="number"] {
+  color: var(--text-color);
+}
+
+@media (max-width: 35em) {
+  .header-base{
+    font-size: 2rem;
+  }
+
+  .intro {
+    gap: 1rem;
+    flex-direction: column;
+  }
+
+  .intro h1 {
+    text-align: center;
+  } 
+}
+
+.question-options {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  width: 100%;
+  --gap: 2rem ;
+}
+
+.question-option {
+  font-size: 1.6rem;
+  min-width: 10rem;
+  transition: 250ms ease-in-out;
+}
+
+input[type="radio"]:checked + label.correct {
+  background-color: green;
+}
+
+input[type="radio"]:checked + label.wrong {
+  background-color: red;
 }

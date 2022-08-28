@@ -1,0 +1,28 @@
+{
+    "questions": [
+        {
+            "q":"If the two angles of a triangle are 45° and 60°, respectively, then what is the third angle?",
+            "a": "75",
+            "options":["35", "54", "75", "100"],
+            "marks":"1"
+        },
+        {
+            "q":"If a triangle has one of its angle 90, what is it called?",
+            "a": "right angled",
+            "options":["obtuse", "right angled", "90 angle triangle", "acute"],
+            "marks":"1"
+        },
+        {
+            "q":"If a triangle has sides equal to 5cm, 4cm and 6cm, then what is its perimeter?",
+            "a": "15",
+            "options":["35", "29", "125", "15"],
+            "marks":"1"
+        },
+        {
+            "q":"If the height of a triangle is 7cm and the base length is equal to 10 cm, then what is its area?",
+            "a": "35",
+            "options":["35", "44", "75", "70"],
+            "marks":"3"
+        }
+    ]
+}
