@@ -1,9 +1,10 @@
 import { NavLink } from "react-router-dom";
 import Header from "../components/Header";
 
-document.title = "Triagnles | Home";
+
 
 function Home() {
+    document.title = "Triagnles | Home";
     return ( 
         <>
             <Header />

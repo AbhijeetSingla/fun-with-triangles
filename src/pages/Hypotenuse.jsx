@@ -2,9 +2,9 @@ import { useState } from "react";
 import {getHypotenuse} from "../utils/functions";
 import { FormControl, TextField } from "@mui/material";
 
-document.title = "Triangles | Hypotenuse Calculator";
-
 function Hypotenuse() {
+
+    document.title = "Triangles | Hypotenuse Calculator";
 
     const [sides, setSides] = useState({first: 0, second: 0});
     const [triangleRep, setTriangleRep] = useState({left: 0, right: 0, bottom: 0});

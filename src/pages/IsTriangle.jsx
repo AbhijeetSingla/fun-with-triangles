@@ -2,9 +2,9 @@ import { FormControl, TextField } from "@mui/material";
 import { useState } from "react";
 import { isTriangle } from "../utils/functions";
 
-document.title = "Triangles | Is Triangle?";
-
 function IsTriangle() {
+
+    document.title = "Triangles | Is Triangle?";
 
     const [angles, setAngles] = useState({first: 0, second: 0, third: 0});
     const [confirmation, setConfirmation] = useState("");
@@ -17,7 +17,7 @@ function IsTriangle() {
     function formSubmit(event, angles) {
         event.preventDefault();
         const difference = isTriangle(angles);
-        difference === 0 ? setConfirmation("These angles can form a triangle") : setConfirmation(`Sorry, you need increase the angles by ${difference} units`);
+        difference === 0 ? setConfirmation("These angles can form a triangle") : setConfirmation(`Sorry, you need to adjust the angles by ${difference} units`);
     }
 
     return ( 

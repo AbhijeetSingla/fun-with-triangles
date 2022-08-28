@@ -2,9 +2,9 @@ import { FormControl, TextField } from "@mui/material";
 import { useState } from "react";
 import { getArea } from "../utils/functions";
 
-document.title = "Triangles | Area Calculator";
-
 function Areacalculator() {
+
+    document.title = "Triangles | Area Calculator";
 
     const [sides, setSides] = useState({first: 0, second: 0});
     const [confirmation, setConfirmation] = useState("");

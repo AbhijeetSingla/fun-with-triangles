@@ -1,9 +1,11 @@
 import { useState } from "react";
 import db from "../database/quizQuestions.json";
 
-document.title = "Triagnles | Quiz";
+
 
 function Quiz() {
+
+    document.title = "Triangles | Quiz";
 
     const [score, setScore] = useState(0);
 
